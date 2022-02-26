@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-function TodoForm() {
-  const [input, setInput] = useState("");
-  const [todos, setTodos] = useState([]);
+function TodoForm( {input , setInput , todos, setTodos} ) {
+  
 
   const hadleChange = (e) => {
     setInput(e.target.value);
   };
 
   const handleSubmit = (e) => {
+    console.log(todos)
     e.preventDefault();
 
     setTodos(

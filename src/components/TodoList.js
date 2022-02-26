@@ -1,49 +1,14 @@
-import React, { useState } from "react";
-import { FaTrash } from "react-icons/fa";
+import React from "react";
+import Todo from "./Todo";
 
-function TodoList() {
-  const [isActive, setActive] = useState(false);
+function TodoList({todos}) {
 
-
-  const completeHandle = (e) => {
-    
-    setActive(!isActive);
-    // if(e.target.className ='completed'){
-    //   console.log('comletedffdkjfkdsjf')
-    // }
-    // else{
-    //   setActive(!isActive);
-    //   console.log("class toggle");
-    // }
-    
-  };
 
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        <div className="todo">
+        {todos.map((todo) =>(<Todo text={todo.text} />))}
 
-
-          <li className="todo-item" onClick={completeHandle}>
-            <span className={isActive ? "completed" : null}>hey guys</span>
-
-            <FaTrash
-              className="trash-btn"
-
-              onClick={(e) => {
-                e.stopPropagation();
-                
-     
-
-                if (
-                  window.confirm("Are you sure you wish to delete this item?")
-                )
-                  this.onCancel(e);
-              }}
-            />
-
-          </li>
-        </div>
       </ul>
     </div>
   );

@@ -2,7 +2,7 @@
   text-align: center;
 }
 .todo-list {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   list-style: none;
   color: rgb(255, 255, 255);
   padding: 0 0.5em;
@@ -161,7 +161,7 @@ li {
   /* padding: .2rem; */
   overflow: hidden;
   border-radius: 0.3em;
-  /* margin: 0.5rem; */
+  margin: 2rem;
   background: white;
   color: rgb(95, 95, 95);
   display: flex;
@@ -172,8 +172,7 @@ li {
 .filter-todo{
   position: absolute;
   top: 150px;
-  margin-left: 20px;
-  /* left: 570px; */
+  margin-left:7px;
   text-align: right;
 }
 
