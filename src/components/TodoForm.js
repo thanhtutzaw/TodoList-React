@@ -35,7 +35,7 @@ function TodoForm() {
           <span className="plus">+</span>
         </button>
       </form>
-      {input}
+      {/* {input} */}
     </div>
   );
 }
