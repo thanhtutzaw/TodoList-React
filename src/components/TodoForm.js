@@ -10,18 +10,19 @@ function TodoForm( {input , setInput , todos, setTodos} ) {
   const handleSubmit = (e) => {
     // console.log(todos)
     e.preventDefault();
-    // if(!input){
-    //   alert('Null ....')
-    // }
+
+    if(input){
+    
     setTodos(
-      // if(!input){
-      //   alert('Null ....')
-      // }
       [
       ...todos,
       { id: Math.floor(Math.random() * 10000), text: input, completed: false },
       ]
     );
+  }
+  else{
+    return null
+  }
     setInput("");
   };
   return (
@@ -30,7 +31,7 @@ function TodoForm( {input , setInput , todos, setTodos} ) {
         <input
           onChange={hadleChange}
           value={input}
-          required
+          // required
           type="text"
           name="text"
           placeholder="Type here"
