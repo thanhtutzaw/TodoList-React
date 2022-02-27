@@ -8,10 +8,15 @@ function TodoForm( {input , setInput , todos, setTodos} ) {
   };
 
   const handleSubmit = (e) => {
-    console.log(todos)
+    // console.log(todos)
     e.preventDefault();
-
+    // if(!input){
+    //   alert('Null ....')
+    // }
     setTodos(
+      // if(!input){
+      //   alert('Null ....')
+      // }
       [
       ...todos,
       { id: Math.floor(Math.random() * 10000), text: input, completed: false },
@@ -21,10 +26,11 @@ function TodoForm( {input , setInput , todos, setTodos} ) {
   };
   return (
     <div className="container">
-      <form className="todo-form" onSubmit={handleSubmit}>
+      <form  className="todo-form" onSubmit={handleSubmit}>
         <input
           onChange={hadleChange}
           value={input}
+          required
           type="text"
           name="text"
           placeholder="Type here"

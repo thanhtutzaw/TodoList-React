@@ -19,7 +19,7 @@ function App() {
       setTodos = {setTodos}
       />
       <Filter />
-      <TodoList todos={todos}/>
+      <TodoList setTodos={setTodos} input={input} id={todos.id} todos={todos}/>
       
       
     </div>
