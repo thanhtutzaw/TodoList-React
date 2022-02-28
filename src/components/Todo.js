@@ -5,8 +5,8 @@ function Todo({ text, todo, todos, setTodos , status , setstatus}) {
   // const [isActive, setActive] = useState(false);
 
   const completeHandle = (e) => {
-    console.log(todo.id)
-    console.log(todo.completed + "hfhdi")
+    // console.log(todo.id)
+    // console.log(todo.completed + "hfhdi")
     setstatus(!status)
     // setActive(!isActive);
     setTodos(
@@ -28,9 +28,9 @@ function Todo({ text, todo, todos, setTodos , status , setstatus}) {
   };
 
   return (
-    <div className="todo">
+    <div className={`todo ${todo.completed ? "completed" : ''}`}>
       <li className="todo-item" onClick={completeHandle}>
-        <span className={todo.completed ? "completed" : ''}>{text}</span>
+        <span >{text}</span>
 
         <FaTrash
           className="trash-btn"
