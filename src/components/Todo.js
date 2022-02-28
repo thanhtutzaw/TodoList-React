@@ -1,29 +1,36 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 
-function Todo({ text, todo, todos, setTodos }) {
-  const [isActive, setActive] = useState(false);
-  const deleteHandle = () => {
-    setTodos(todos.filter((el) => el.id !== todo.id));
-  };
+function Todo({ text, todo, todos, setTodos , status , setstatus}) {
+  // const [isActive, setActive] = useState(false);
+
   const completeHandle = (e) => {
-    setActive(!isActive);
-    // if(e.target.className ='completed'){
-    //   console.log('comletedffdkjfkdsjf')
-    // }
-    // else{
-    //   setActive(!isActive);
-    //   console.log("class toggle");
-    // }
+    console.log(todo.id)
+    console.log(todo.completed + "hfhdi")
+    setstatus(!status)
+    // setActive(!isActive);
+    setTodos(
+      todos.map( (item) => 
+        {
+          if(item.id == todo.id){
+            return{
+              ...item , completed: !item.completed
+            }
+          }
+          return item;
+        }
+      )
+    )
   };
-  // if(!input){
-  //   alert('Null ....')
-  // }
+
+  const deleteHandle = () => {
+    setTodos(todos.filter( (el) => el.id !== todo.id));
+  };
 
   return (
     <div className="todo">
       <li className="todo-item" onClick={completeHandle}>
-        <span className={isActive ? "completed" : null}>{text}</span>
+        <span className={todo.completed ? "completed" : ''}>{text}</span>
 
         <FaTrash
           className="trash-btn"
