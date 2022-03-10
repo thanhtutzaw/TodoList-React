@@ -1,14 +1,17 @@
 import React from "react";
 import Todo from "./Todo";
 
-function TodoList({ todos, setTodos , filterTodo ,status ,setstatus }) {
+function TodoList({ todos, setTodos, filterTodo, status, setstatus }) {
+  // if (!todos) {
+  //   alert("null");
+  // }
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {filterTodo.map((todo) => (
+        {filterTodo.map( (todo) => (
           <Todo
-          status={status}
-          setstatus={setstatus}
+            status={status}
+            setstatus={setstatus}
             setTodos={setTodos}
             todos={todos}
             todo={todo}

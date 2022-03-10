@@ -11,6 +11,8 @@ function App() {
   const [filterTodo, setfilterTodo] = useState([]);
   useEffect(() => {
     getLocal();
+    // saveLocal();
+
   }, []);
 
   useEffect(() => {
@@ -38,10 +40,11 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
   const getLocal = () => {
+    
     if (localStorage.getItem("todos") === null) {
-      localStorage.setItem("todos", JSON.stringify([]));
+      localStorage.setItem("todos", JSON.stringify([]) );
     } else {
-      let todoLocal = JSON.parse(localStorage.getItem(todos));
+      let todoLocal = JSON.parse(localStorage.getItem('todos'));
       setTodos(todoLocal);
     }
   };
@@ -54,15 +57,17 @@ function App() {
         todos={todos}
         setTodos={setTodos}
       />
+
       <Filter setstatus={setstatus} />
+
       <TodoList
-        setstatus={setstatus}
-        status={status}
-        filterTodo={filterTodo}
-        setTodos={setTodos}
-        input={input}
-        id={todos.id}
-        todos={todos}
+      setstatus={setstatus}
+      status={status}
+      filterTodo={filterTodo}
+      setTodos={setTodos}
+      input={input}
+      key={todos.id}
+      todos={todos}
       />
     </div>
   );
