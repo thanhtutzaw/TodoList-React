@@ -155,7 +155,11 @@ li {
   /* padding:1rem; */
 }
 .todo-item span {
-  margin: 0 1rem;
+  display: block;
+    width: 90%;
+    word-break: break-word;
+    margin: 0 1rem;
+
 }
 .todo {
   /* padding: .2rem; */
