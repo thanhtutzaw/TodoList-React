@@ -8,7 +8,7 @@ function TodoList({ todos, setTodos, filterTodo, status, setstatus }) {
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {filterTodo.map( (todo) => (
+        {filterTodo.map((todo) => (
           <Todo
             status={status}
             setstatus={setstatus}

@@ -6,7 +6,9 @@ import TodoList from "./components/TodoList";
 
 function App() {
   const [input, setInput] = useState("");
+
   const [todos, setTodos] = useState([]);
+
   const [status, setstatus] = useState("all");
   const [filterTodo, setfilterTodo] = useState([]);
   useEffect(() => {
@@ -15,7 +17,7 @@ function App() {
 
   }, []);
 
-  useEffect(() => {
+  useEffect( () => {
     filterHandle();
     saveLocal();
   }, [todos, status]);
@@ -39,6 +41,7 @@ function App() {
   const saveLocal = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   };
+  
   const getLocal = () => {
     
     if (localStorage.getItem("todos") === null) {
