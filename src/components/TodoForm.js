@@ -1,4 +1,5 @@
 import React from "react";
+import {CgChevronRightR} from "react-icons/cg"
 
 function TodoForm({ input, setInput, todos, setTodos }) {
   const hadleChange = (e) => {
@@ -42,6 +43,8 @@ function TodoForm({ input, setInput, todos, setTodos }) {
           <span className="plus">+</span>
         </button>
       </form>
+      <a className="btnParent" href="https://todolistzee2.netlify.app"><button className="btn" type="button"><CgChevronRightR /></button></a>
+
       {/* {input} */}
     </div>
   );

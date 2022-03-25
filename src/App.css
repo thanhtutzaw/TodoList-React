@@ -226,3 +226,21 @@ ul li {
   transform: translateX(5rem);
   opacity: 0;
 }
+
+.btnParent{
+  position: absolute;
+  right:6px;
+  top:0;
+}
+.btn{
+  font-size: 1.4rem;
+  color:white;
+  padding:.7rem;
+  /* background-color: rgba(182, 182, 182, 0.383); */
+  background-color: transparent;
+  border: none;
+  margin-top:-3px;
+}
+.btn:focus{
+  outline:none;
+}
