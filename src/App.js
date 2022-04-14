@@ -31,6 +31,7 @@ function App() {
       case "uncompleted":
         setfilterTodo(todos.filter((todo) => todo.completed === false));
         break;
+
       default:
         setfilterTodo(todos);
         break;
@@ -43,7 +44,6 @@ function App() {
   };
   
   const getLocal = () => {
-    
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]) );
     } else {

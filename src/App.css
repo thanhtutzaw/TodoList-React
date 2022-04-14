@@ -10,6 +10,10 @@
   min-width: 20%;
   list-style: none;
 }
+.todo-form{
+  display: flex;
+  justify-content: center;
+}
 .todo-form input,
 button {
   border: none;
@@ -62,6 +66,7 @@ select {
 }
 
 form input {
+  border:3px solid red;
   border-radius: 0.2em 0 0 0.2em;
 }
 
@@ -83,11 +88,6 @@ form button {
 select {
   text-align: center;
 }
-
-/* .select::after{
-  color:red;
-} */
-
 hr {
   width: 50%;
   margin-bottom: 55px;
@@ -261,4 +261,10 @@ ul li {
 *::-webkit-scrollbar-track {
   /* box-shadow: inset 0 0 5px grey; */
   border-radius: 10px;
+}
+.todo-input{
+  /* position:relative;
+  left:0;
+  right:0;
+  width:250px; */
 }
